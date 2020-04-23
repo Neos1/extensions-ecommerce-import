@@ -3,6 +3,16 @@
     "description": "This extension should be used as core for any ecommerce import",
     "type": "library",
     "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "Whitebox\\EcommerceImport\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Whitebox\\EcommerceImport\\Test\\": "./test"
+        }
+    },
     "require": {
         "symfony/yaml": "^3.4",
         "php" : "^5.6 || ^7.0",
@@ -19,5 +29,8 @@
             "email": "coder@neos1.com"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "config": {
+        "optimize-autoloader": true
+    }
 }
