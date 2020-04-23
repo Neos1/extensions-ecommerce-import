@@ -1,0 +1,23 @@
+{
+    "name": "whitebox/ecommerce-import",
+    "description": "This extension should be used as core for any ecommerce import",
+    "type": "library",
+    "version": "0.0.1",
+    "require": {
+        "symfony/yaml": "^3.4",
+        "php" : "^5.6 || ^7.0",
+        "sirian/yandex-market-language-parser": "3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "php" : "^5.6 || ^7.0"
+    },
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "Artem Shinkaruk",
+            "email": "coder@neos1.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
