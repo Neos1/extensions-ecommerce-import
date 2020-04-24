@@ -6,7 +6,6 @@ use RuntimeException;
 use Symfony\Component\Yaml\Yaml;
 use Whitebox\EcommerceImport\Parser\Factory as ParserFactory;
 use Whitebox\EcommerceImport\Schema\Entity;
-use Whitebox\EcommerceImport\Schema\Key;
 use Whitebox\EcommerceImport\Schema\Param;
 
 class Schema
@@ -37,6 +36,21 @@ class Schema
     public function getEntities()
     {
         return $this->entities;
+    }
+
+    /**
+     * @param string $name
+     * @return Entity|null
+     */
+    public function getEntity($name)
+    {
+        $filtered = array_filter($this->entities, function (Entity $entity) use ($name) {
+            return $entity->getName() === $name;
+        });
+        if (count($filtered) > 0) {
+            return reset($filtered);
+        }
+        return null;
     }
 
     /**
@@ -80,7 +94,13 @@ class Schema
                     if (isset($data['parser_options'])) {
                         $param->setParserOptions($data['parser_options']);
                     }
-                    $params[] = $param;
+                    if (isset($data['type'])) {
+                        $param->setType($data['type']);
+                    }
+                    if (isset($params[$param->getName()])) {
+                        throw new RuntimeException('Duplicate parameter: ' . $param->getName());
+                    }
+                    $params[$param->getName()] = $param;
                 }
                 $entities[] = new Entity($name, $params);
             }

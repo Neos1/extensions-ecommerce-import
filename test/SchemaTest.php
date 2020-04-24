@@ -23,6 +23,7 @@ entities:
     description:
     price:
       required: true
+      type: float
     ean:
       parser_options: []
 EOD;
@@ -39,13 +40,12 @@ EOD;
                 'price',
                 'ean'
             ],
-            array_map(function (Param $key) {
-                return $key->getName();
-            }, $offer->getParams())
+            array_keys($offer->getParams())
         );
-        $this->assertEquals('name-ru_RU', $offer->getParams()[0]->getAlias());
-        $this->assertFalse($offer->getParams()[1]->isRequired());
-        $this->assertTrue($offer->getParams()[2]->isRequired());
-        $this->assertEquals([], $offer->getParams()[3]->getParserOptions());
+        $this->assertEquals('name-ru_RU', $offer->getParam('name')->getAlias());
+        $this->assertFalse($offer->getParam('description')->isRequired());
+        $this->assertTrue($offer->getParam('price')->isRequired());
+        $this->assertEquals('float', $offer->getParam('price')->getType());
+        $this->assertEquals([], $offer->getParam('ean')->getParserOptions());
     }
 }

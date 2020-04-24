@@ -2,14 +2,17 @@
 
 namespace Whitebox\EcommerceImport\Schema;
 
-use Whitebox\EcommerceImport\Parser\Options;
-
 class Param
 {
     /**
      * @var string
      */
     protected $name;
+
+    /**
+     * @var string
+     */
+    protected $type = 'string';
 
     /**
      * @var string
@@ -22,9 +25,9 @@ class Param
     protected $required = false;
 
     /**
-     * @var Options[]
+     * @var mixed
      */
-    protected $parserOptions = [];
+    protected $parserOptions;
     
     /**
      * @param string $name
@@ -51,6 +54,34 @@ class Param
     {
         return $this->alias;
     }
+
+    /**
+     * @param mixed $value
+     * @return boolean
+     */
+    public function isValidValue($value)
+    {
+        $is_valid = true;
+        switch ($this->type) {
+            case 'string':
+                $is_valid = is_string($value);
+                break;
+            case 'integer':
+            case 'int':
+                $is_valid = is_integer($value);
+                break;
+            case 'float':
+                $is_valid = is_float($value);
+                break;
+            case 'numeric':
+                $is_valid = is_numeric($value);
+                break;
+            case 'array':
+                $is_valid = is_array($value);
+                break;
+        }
+        return $is_valid;
+    }
     
     /**
      * @param boolean $required
@@ -62,16 +93,33 @@ class Param
     }
 
     /**
-     * @param Options[] $options
+     * @param string $type
      * @return void
      */
-    public function setParserOptions(array $options)
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $options
+     * @return void
+     */
+    public function setParserOptions($options)
     {
         $this->parserOptions = $options;
     }
 
     /**
-     * @return Options[]
+     * @return mixed
      */
     public function getParserOptions()
     {

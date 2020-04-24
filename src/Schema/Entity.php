@@ -11,6 +11,7 @@ class Entity
     protected $name;
 
     /**
+     * Indexed by name array of params 
      * @var Param[]
      */
     protected $params = [];
@@ -39,5 +40,23 @@ class Entity
     public function getParams()
     {
         return $this->params;
+    }
+
+    /**
+     * @param string $name
+     * @return boolean
+     */
+    public function hasParam($name)
+    {
+        return isset($this->params[$name]);
+    }
+
+    /**
+     * @param string $name
+     * @return Param|null
+     */
+    public function getParam($name)
+    {
+        return isset($this->params[$name]) ? $this->params[$name] : null;
     }
 }
