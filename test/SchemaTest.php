@@ -7,6 +7,9 @@ use Whitebox\EcommerceImport\Parser\YMLParser;
 use Whitebox\EcommerceImport\Schema;
 use Whitebox\EcommerceImport\Schema\Param;
 
+/**
+ * @covers Whitebox\EcommerceImport\Schema
+ */
 class SchemaTest extends TestCase
 {
     public function testCreateFromYaml()

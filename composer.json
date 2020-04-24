@@ -19,7 +19,7 @@
         "sirian/yandex-market-language-parser": "3.0"
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit --coverage-html coverage"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
