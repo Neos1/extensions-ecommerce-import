@@ -2,13 +2,124 @@
 
 namespace Whitebox\EcommerceImport\Parser;
 
-use Whitebox\EcommerceImport\Parser;
+use Sirian\YMLParser\Offer\Offer;
+use Sirian\YMLParser\Offer\VendorModelOffer;
 use Whitebox\EcommerceImport\Schema;
+use Sirian\YMLParser\Parser;
+use Whitebox\EcommerceImport\Entity;
+use Whitebox\EcommerceImport\Schema\Entity as EntitySchema;
+use Whitebox\EcommerceImport\Schema\Param;
 
-class YMLParser implements Parser
+class YMLParser extends AbstractParser
 {
-    public function parse($file, Schema $parser)
+
+    /**
+     * @param string $file
+     * @param Schema $schema
+     * @return void
+     */
+    public function parse($file, Schema $schema)
     {
-        return [];
+        $parser = new Parser();
+        $result = $parser->parse($file);
+        // NOTE: need to call it before accessing offers
+        $result->getShop();
+        $offer_schema = $schema->getEntity('offer');
+        if (is_null($offer_schema)) {
+            $this->addError('No offer entity');
+            return [];
+        }
+        $entities = [];
+        foreach ($result->getOffers() as $offer) {
+            $entity = $this->offerToEntity($offer, $offer_schema);
+            if (!is_null($entity)) {
+                $entities[] = $entity;
+            }
+        }
+        return $entities;
+    }
+
+    /**
+     * @param Offer $offer
+     * @param Param $param
+     * @return mixed|null
+     */
+    public function extractParamValueFromOffer(Offer $offer, Param $param)
+    {
+        switch ($param->getName()) {
+            case 'id':
+                return $offer->getId();
+            case 'name':
+                return $offer->getName();
+            case 'description':
+                return $offer->getDescription();
+            case 'price':
+                return $offer->getPrice();
+            case 'currency':
+                return $offer->getCurrency();
+            case 'vendor':
+                return $offer instanceof VendorModelOffer ? $offer->getVendor() : null;
+            case 'vendorCode':
+                return $offer instanceof VendorModelOffer ? $offer->getVendorCode() : null;
+            case 'pictures':
+                return $offer->getPictures();
+            case 'params':
+                return $offer->getParams();
+            default:
+                return $this->extractParamValueFromOfferUsingOptions($offer, $param);
+        }
+    }
+
+    /**
+     * @param Offer $offer
+     * @param Param $param
+     * @return mixed|null
+     */
+    public function extractParamValueFromOfferUsingOptions(Offer $offer, Param $param)
+    {
+        switch ($param->getParserOptions()) {
+            case 'attribute':
+                $offer->getAttribute($param->getName());
+                break;
+            default:
+                return null;
+        }
+    }
+
+    /**
+     * @param Offer $offer
+     * @param EntitySchema $schema
+     * @return Entity|null
+     */
+    public function offerToEntity(Offer $offer, EntitySchema $schema)
+    {
+        $entity = new Entity('offer');
+        $message = '%s, offer_id: ' . $offer->getId();
+        if (($schema->hasParam('vendor') || $schema->hasParam('vendorCode'))
+            && !($offer instanceof VendorModelOffer)
+        ) {
+            $this->addError(sprintf($message, 'Expected vendor model offer'));
+            return null;
+        }
+        foreach ($schema->getParams() as $param) {
+            $value = $this->extractParamValueFromOffer($offer, $param);
+            if ($param->isRequired() && is_null($value)) {
+                $this->addError(sprintf($message, 'Missing required param: ' . $param->getName()));
+                return null;
+            }
+            if (is_null($value)) {
+                $value = $param->getDefault();
+            }
+            if (!$param->isValidValue($value)) {
+                if ($param->isRequired()) {
+                    $this->addError(sprintf($message, 'Required param: "' . $param->getName() . '" is invalid'));
+                    return null;
+                }
+                $this->addWarning(sprintf($message, 'Param is invalid: ' . $param->getName()));
+            } else {
+                $entity->{$param->getAlias()} = $value;
+            }
+        }
+        return $entity;
     }
 }

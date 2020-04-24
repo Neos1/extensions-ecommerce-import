@@ -15,6 +15,14 @@ class Entity
     protected $data = [];
 
     /**
+     * @param string $name
+     */
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
      * @return string
      */
     public function getName()

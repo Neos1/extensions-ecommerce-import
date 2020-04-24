@@ -10,4 +10,14 @@ interface Parser
      * @return Entity[]
      */
     public function parse($file, Schema $schema);
+
+    /**
+     * @return string[]
+     */
+    public function getErrors();
+
+    /**
+     * @return string[]
+     */
+    public function getWarnings();
 }

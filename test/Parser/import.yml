@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2020-04-24 12:10">
+<shop>
+    <categories>
+        <category id="1">Посуда для приготовления</category>
+        <category id="101" parentId="1">Наборы посуды</category>
+        <category id="113" parentId="1">Теппаньяки</category>
+    </categories>
+    <offers>
+        <offer id="1100890" available="true" inStock="11">
+            <name>Набор для спагетти 20пр Studio</name>
+            <price>16470</price>
+            <currencyId>RUR</currencyId>
+            <vendor>BergHOFF</vendor>
+            <vendorCode>1100890</vendorCode>
+            <barcode>5413821100890</barcode>
+            <description>
+            <![CDATA[
+            Полный набор для приготовления пасты любой длины и формы. Кастрюля из нержавеющей стали 18/10 быстро нагревается, экономя электроэнергию. Перфорированная вставка облегчает слив, становясь дуршлагом, - ее нужно просто вынуть из кастрюли. Разумеется, вы можете использовать кастрюлю и саму по себе для приготовления супов. Используя вставку, вы превращаете ее в пароварку. Кастрюля подходит для всех типов плит, включая индукционные. Щипцы позволяют комфортно сервировать пасту в тарелки из высококачественного фарфора. В набор включены 4 вилки и 2 блюда для сервировки пасты, соусов, салатов и других сопровождающих блюд. Миска с теркой позволяет натирать сыры прямо за столом. Белый фарфор идеально сочетается со всеми видами и стилями сервировки. Все предметы подходят для мытья в посудомоечной машине, тарелки можно использовать в духовом шкафу и микроволновой печи.<br\><br\>Состав набора:<br/>6x тарелка для пасты 27см</br>1x миска для салата 31см</br>1x миска для соуса 14см</br>1x терка 15см</br>6x вилка для пасты 21см</br>1x щипцы для пасты 27см</br>1x кастрюля для пасты с крышкой и вставкой-пароваркой 20см
+            ]]>
+            </description>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <categoryId>101</categoryId>
+            <categoriesList>
+            <categoryId>101</categoryId>
+            </categoriesList>
+            <pictureTHUMB>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/thumb.jpg
+            </pictureTHUMB>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_001.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_002.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_003.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_004.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_005.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_006.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_007.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_008.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_009.jpg
+            </picture>
+            <param name="Бренд">BergHOFF</param>
+            <param name="Серия">Studio</param>
+            <param name="Вес" unit="кг">11.14</param>
+            <param name="Цвет">Металл</param>
+            <param name="Материал">
+            18/10 нержавеющая сталь
+            <br/>
+            фарфор
+            </param>
+            <param name="Крышка">Стекло</param>
+            <param name="Внутренняя отделка">Зеркальная</param>
+            <param name="Внешняя отделка">Зеркальная</param>
+            <param name="Дно">3-слойное</param>
+            <param name="Источник тепла">
+            Подходит для любых типов плит, включая индукционные
+            </param>
+            <param name="Уход">Подходит для посудомоечной машины</param>
+            <param name="specIcons">xquecdbaigzO</param>
+        </offer>
+        <offer id="1112005" available="true" inStock="4">
+            <name>Набор посуды 12пр Hotel</name>
+            <price>30760</price>
+            <currencyId>RUR</currencyId>
+            <vendor>BergHOFF</vendor>
+            <vendorCode>1112005</vendorCode>
+            <barcode>5413821039053</barcode>
+            <description>
+            <![CDATA[
+            Состав набора:<br/>1x кастрюля с крышкой 18см 3,0л<br>1x кастрюля с крышкой 20см 3,9л<br>1x бульонная кастрюля с крышкой 24см 7,0л<br>1x сотейник с крышкой и 2-мя ручками 24см 3,6л<br>1x миска с крышкой 20см<br>1x миска с крышкой 24см
+            ]]>
+            </description>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <categoryId>101</categoryId>
+            <categoriesList>
+            <categoryId>101</categoryId>
+            </categoriesList>
+            <pictureTHUMB>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1112005/thumb.jpg
+            </pictureTHUMB>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1112005/1112005_001.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1112005/1112005_002.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1112005/1112005_003.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1112005/1112005_004.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1112005/1112005_005.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1112005/1112005_006.jpg
+            </picture>
+            <param name="Бренд">BergHOFF</param>
+            <param name="Серия">Hotel</param>
+            <param name="Вес" unit="кг">11.1</param>
+            <param name="Цвет">Красный</param>
+            <param name="Материал">18/10 нержавеющая сталь</param>
+            <param name="Крышка">Стекло с силиконовой шайбой</param>
+            <param name="Внутренняя отделка">Сатиновая</param>
+            <param name="Внешняя отделка">Сатиновая</param>
+            <param name="Ручка">нержавеющая сталь 18/10</param>
+            <param name="Дно">3-слойное</param>
+            <param name="Источник тепла">
+            Подходит для любых типов плит, включая индукционные
+            </param>
+            <param name="Уход">Подходит для посудомоечной машины</param>
+            <param name="specIcons">xqecdbaih</param>
+        </offer>
+        <offer id="1100030" available="true" inStock="7">
+            <name>Теппаньяки 35*57см Geminis</name>
+            <price>17580</price>
+            <currencyId>RUR</currencyId>
+            <vendor>BergHOFF</vendor>
+            <vendorCode>1100030</vendorCode>
+            <barcode>5413821047560</barcode>
+            <description>
+            <![CDATA[
+            4 различных материала, использованных в этом 5-слойном теппаньяки, образуя изобретательный альянс, делают возможным равномерное распределение тепла по всей поверхности. Теппаньяки представляет собой бесшовную панель, по которой тепло будет передаваться очень быстро и равномерно. Благодаря силиконовым накладкам ручки не нагреваются, позволяя безопасно переносить теппаньяки с плиты на стол. Этот теппаньяки был специально разработан для индукционных плит, но также может быть использован на плитах всех остальных типов. Важно заранее убедиться, что теппаньяки подходит к размерам вашей плиты. Индукционные плиты с индивидуальными зонами нагрева различного размера (или зонами нагрева, объединенными в одну большую), идеальны для этого теппаньяки.
+            ]]>
+            </description>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <categoryId>113</categoryId>
+            <categoriesList>
+            <categoryId>113</categoryId>
+            </categoriesList>
+            <pictureTHUMB>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100030/thumb.jpg
+            </pictureTHUMB>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100030/1100030_001.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100030/1100030_002.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100030/1100030_003.jpg
+            </picture>
+            <param name="Бренд">BergHOFF</param>
+            <param name="Серия">Geminis</param>
+            <param name="Ширина" unit="см">35</param>
+            <param name="Длина" unit="см">57</param>
+            <param name="Высота" unit="см">6</param>
+            <param name="Вес" unit="кг">3.56</param>
+            <param name="Цвет">Металл</param>
+            <param name="Материал">5-слойный материал</param>
+            <param name="Внутренняя отделка">Сатиновая</param>
+            <param name="Внешняя отделка">Сатиновая</param>
+            <param name="Ручка">Ненагревающаяся ручка</param>
+            <param name="Дно"> </param>
+            <param name="Источник тепла">
+            Подходит для любых типов плит, включая индукционные
+            </param>
+            <param name="Уход">Подходит для посудомоечной машины</param>
+            <param name="specIcons">x8ecdbahgO</param>
+        </offer>
+    </offers>
+</shop>
+</yml_catalog>

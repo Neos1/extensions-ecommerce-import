@@ -1,0 +1,27 @@
+parser: yml
+entities:
+  offer:
+    id:
+    available:
+      alias: published
+    inStock:
+      parser_options: attribute
+      alias: quantity
+    name:
+      required: true
+    description:
+    price:
+      type: float
+      required: true
+    currency:
+      default: RUR
+    vendor:
+      alias: brand
+      required: true
+    vendorCode:
+      alias: ean
+      required: true
+    pictures:
+      type: array
+    params:
+      type: array
