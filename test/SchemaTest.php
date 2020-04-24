@@ -25,6 +25,7 @@ entities:
       required: true
       type: float
     ean:
+      default: 123
       parser_options: []
 EOD;
         $schema = Schema::createFromYaml($raw);
@@ -46,6 +47,7 @@ EOD;
         $this->assertFalse($offer->getParam('description')->isRequired());
         $this->assertTrue($offer->getParam('price')->isRequired());
         $this->assertEquals('float', $offer->getParam('price')->getType());
+        $this->assertEquals('123', $offer->getParam('ean')->getDefault());
         $this->assertEquals([], $offer->getParam('ean')->getParserOptions());
     }
 }

@@ -15,6 +15,11 @@ class Param
     protected $type = 'string';
 
     /**
+     * @var mixed
+     */
+    protected $default = null;
+
+    /**
      * @var string
      */
     protected $alias;
@@ -107,6 +112,23 @@ class Param
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * @param mixed $default
+     * @return void
+     */
+    public function setDefault($default)
+    {
+        $this->default = $default;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDefault()
+    {
+        return $this->default;
     }
 
     /**

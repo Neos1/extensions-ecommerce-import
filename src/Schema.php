@@ -97,6 +97,9 @@ class Schema
                     if (isset($data['type'])) {
                         $param->setType($data['type']);
                     }
+                    if (isset($data['default'])) {
+                        $param->setDefault($data['default']);
+                    }
                     if (isset($params[$param->getName()])) {
                         throw new RuntimeException('Duplicate parameter: ' . $param->getName());
                     }
