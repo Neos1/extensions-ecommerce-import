@@ -47,6 +47,6 @@ abstract class AbstractParser implements Parser
      */
     public function getWarnings()
     {
-        return $this->errors;
+        return $this->warnings;
     }
 }

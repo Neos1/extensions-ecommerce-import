@@ -51,6 +51,8 @@ class YMLParser extends AbstractParser
                 return $offer->getId();
             case 'name':
                 return $offer->getName();
+            case 'available':
+                return $offer->isAvailable();
             case 'description':
                 return $offer->getDescription();
             case 'price':
@@ -79,8 +81,7 @@ class YMLParser extends AbstractParser
     {
         switch ($param->getParserOptions()) {
             case 'attribute':
-                $offer->getAttribute($param->getName());
-                break;
+                return $offer->getAttribute($param->getName());
             default:
                 return null;
         }

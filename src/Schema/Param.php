@@ -75,6 +75,10 @@ class Param
             case 'int':
                 $is_valid = is_integer($value);
                 break;
+            case 'boolean':
+            case 'bool':
+                $is_valid = is_bool($value);
+                break;
             case 'float':
                 $is_valid = is_float($value);
                 break;

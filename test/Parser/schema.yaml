@@ -4,9 +4,11 @@ entities:
     id:
     available:
       alias: published
+      type: boolean
     inStock:
       parser_options: attribute
       alias: quantity
+      type: numeric
     name:
       required: true
     description:

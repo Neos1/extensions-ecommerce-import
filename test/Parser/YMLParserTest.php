@@ -31,6 +31,7 @@ class YMLParserTest extends TestCase
         }), 'There should be 3 offers');
         $entity1 = $entities[0];
         $this->assertEquals('Набор для спагетти 20пр Studio', $entity1->name);
+        $this->assertTrue($entity1->published);
         $this->assertEquals(16470, $entity1->price);
         $this->assertEquals('RUR', $entity1->currency);
         $this->assertEquals('BergHOFF', $entity1->brand);
