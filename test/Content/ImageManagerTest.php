@@ -16,12 +16,16 @@ class ImageManagerTest extends TestCase
     /**
      * @var ImageManager
      */
-    protected $manager;
+    protected static $manager;
 
-    protected function setUp()
+    public static function setUpBeforeClass()
     {
-        parent::setUp();
-        $this->manager = new ImageManager(static::BASE_DIR);
+        parent::setUpBeforeClass();
+        static::$manager = new ImageManager(
+            static::BASE_DIR,
+            [],
+            ['store_cookies' => true, 'timeout' => 10]
+        );
     }
 
     public static function tearDownAfterClass()
@@ -45,13 +49,13 @@ class ImageManagerTest extends TestCase
     {
         $this->assertEquals(
             'image.jpg',
-            $this->manager->getImageName('http://example.org/image.jpg?v123')
+            static::$manager->getImageName('http://example.org/image.jpg?v123')
         );
     }
 
     public function testDownload()
     {
-        $filename = $this->manager->download(
+        $filename = static::$manager->download(
             'https://whitebox1.io/assets/images/logo-icon.png'
         );
         $this->assertEquals(static::BASE_DIR . '/logo-icon.png', $filename);
@@ -59,7 +63,7 @@ class ImageManagerTest extends TestCase
 
     public function testDownloadWithCustomAllowedExtensions()
     {
-        $manager = new ImageManager(static::BASE_DIR, ['jpg']);
+        $manager = new ImageManager(static::BASE_DIR, ['jpg'], ['store_cookies' => 1, 'timeout' => 10]);
         $filename = $manager->download(
             'https://whitebox1.io/assets/images/logo-icon.png'
         );
@@ -68,8 +72,9 @@ class ImageManagerTest extends TestCase
 
     public function testDownloadToCustomDistFailsWithDisabledDirAutoCreation()
     {
-        $this->manager->createDistDir = false;
-        $filename = $this->manager->download(
+        $manager = clone static::$manager;
+        $manager->createDistDir = false;
+        $filename = $manager->download(
             'https://whitebox1.io/assets/images/logo-icon.png',
             'non-existing'
         );
@@ -81,7 +86,7 @@ class ImageManagerTest extends TestCase
         if (is_dir(static::BASE_DIR . '/custom')) {
             rmdir(static::BASE_DIR . '/custom');
         }
-        $filename = $this->manager->download(
+        $filename = static::$manager->download(
             'https://whitebox1.io/assets/images/logo-icon.png',
             'custom'
         );

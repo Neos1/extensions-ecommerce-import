@@ -11,7 +11,7 @@ class Entity
     protected $name;
 
     /**
-     * Indexed by name array of params 
+     * Indexed by name array of params
      * @var Param[]
      */
     protected $params = [];
