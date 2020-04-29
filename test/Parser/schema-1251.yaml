@@ -1,0 +1,25 @@
+parser: yml
+entities:
+  offer:
+    id:
+    available:
+      alias: published
+      type: boolean
+    name:
+      required: true
+    description:
+    price:
+      type: float
+      required: true
+    currency:
+      default: RUB
+    vendor:
+      alias: brand
+      required: true
+    vendorCode:
+      alias: ean
+      required: true
+    pictures:
+      type: array
+    params:
+      type: array

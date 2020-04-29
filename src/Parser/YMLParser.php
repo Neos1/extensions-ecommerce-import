@@ -58,7 +58,8 @@ class YMLParser extends AbstractParser
             case 'price':
                 return $offer->getPrice();
             case 'currency':
-                return $offer->getCurrency();
+                $currency = $offer->getCurrency();
+                return !is_null($currency) ? $currency->getId() : null;
             case 'vendor':
                 return $offer instanceof VendorModelOffer ? $offer->getVendor() : null;
             case 'vendorCode':

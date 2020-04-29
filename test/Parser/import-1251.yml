@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="windows-1251"?><!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2020-04-23 07:00">
+<shop>
+<name>finedesigngroup.ru</name>
+<company>finedesigngroup.ru</company>
+<url>https://finedesigngroup.ru</url>
+<currencies>
+<currency id="RUB" rate="1" />
+</currencies>
+<categories>
+<category id="1174">Посуда и все для кухни</category>
+<category id="1177">Товары для дома</category>
+<category id="1594">Товары для детей</category>
+<category id="1600">Еда и напитки с собой</category>
+<category id="1610">Текстиль</category>
+<category id="1620">Дизайнерские подарки</category>
+<category id="1623">Багаж и сумки</category>
+<category id="1628">Lifestyle</category>
+<category id="1631">Ароматы для дома</category>
+<category id="1648">Зонты и дождевики</category>
+<category id="1854">Эко-товары</category>
+<category id="1175" parentId="1174">Вино и напитки</category>
+<category id="1176" parentId="1174">Сервировка</category>
+<category id="1189" parentId="1174">Приготовление пищи</category>
+<category id="1190" parentId="1177">Ванная комната</category>
+<category id="1194" parentId="1177">Декор стен</category>
+<category id="1198" parentId="1174">Мелочи для кухни</category>
+<category id="1201" parentId="1174">Чай и кофе</category>
+<category id="1464" parentId="1177">Карнизы</category>
+<category id="1598" parentId="1594">Сумки и аксессуары</category>
+<category id="1611" parentId="1610">Текстиль для кухни</category>
+<category id="1612" parentId="1594">Детские ланч-боксы</category>
+<category id="1622" parentId="1620">Мелочи на каждый день</category>
+<category id="1624" parentId="1623">Сумки</category>
+<category id="1625" parentId="1177">Свет</category>
+<category id="1626" parentId="1177">Детали интерьера</category>
+<category id="1627" parentId="1620">Дом</category>
+<category id="1630" parentId="1594">Подарки для детей</category>
+<category id="1632" parentId="1620">Кухня</category>
+<category id="1633" parentId="1174">Хранение продуктов</category>
+<category id="1636" parentId="1177">Хранение</category>
+<category id="1637" parentId="1620">Товары для праздника</category>
+<category id="1638" parentId="1177">Комнатные растения</category>
+<category id="1639" parentId="1177">Уборка</category>
+<category id="1640" parentId="1177">Вешалки</category>
+<category id="1641" parentId="1594">Декор детской</category>
+<category id="1642" parentId="1177">Outdoor</category>
+<category id="1643" parentId="1174">Порядок на кухне</category>
+<category id="1644" parentId="1177">Фоторамки и фотопанно</category>
+<category id="1649" parentId="1620">Настольные игры</category>
+<category id="1652" parentId="1610">Текстиль для дома</category>
+<category id="1653" parentId="1610">Текстиль для отдыха</category>
+<category id="1654" parentId="1594">Детская посуда</category>
+<category id="1655" parentId="1177">Корзины для мусора</category>
+<category id="1657" parentId="1628">Сезонные надувные игрушки</category>
+<category id="1658" parentId="1177">Мелкая мебель</category>
+<category id="1659" parentId="1623">Рюкзаки</category>
+<category id="1660" parentId="1623">Чемоданы и дорожные сумки</category>
+<category id="1661" parentId="1623">Складные сумки</category>
+<category id="1662" parentId="1623">Сумки-тележки</category>
+<category id="1663" parentId="1600">Термосумки</category>
+<category id="1665" parentId="1174">Приготовление домашнего мороженого</category>
+<category id="1834" parentId="1620">Аксессуары и гаджеты</category>
+<category id="1835" parentId="1620">Канцелярские товары</category>
+<category id="1839" parentId="1177">Хранение украшений</category>
+<category id="1841" parentId="1623">Сумки для ноутбуков</category>
+<category id="1850" parentId="1631">Ароматические свечи</category>
+<category id="1851" parentId="1631">Ароматические диффузоры</category>
+<category id="1852" parentId="1600">Бутылочки и фляги для воды</category>
+<category id="1853" parentId="1174">Выпечка</category>
+<category id="1855" parentId="1854">Напитки с собой</category>
+<category id="1856" parentId="1600">Термокружки, термосы и супницы</category>
+<category id="1857" parentId="1854">Эко-товары для кухни</category>
+<category id="1858" parentId="1174">Столовые приборы</category>
+<category id="1859" parentId="1177">Товары для животных</category>
+<category id="1861" parentId="1854">Предметы сервировки</category>
+<category id="1862" parentId="1177">Зеркала</category>
+<category id="1863" parentId="1174">Ножи</category>
+<category id="1864" parentId="1174">Кастрюли и сковородки</category>
+<category id="1865" parentId="1610">Текстиль для ванной</category>
+<category id="1866" parentId="1177">Контейнеры для мусора</category>
+<category id="1867" parentId="1854">Эко-товары для дома</category>
+<category id="1868" parentId="1600">Ланчбоксы</category>
+<category id="1870" parentId="1600">Столовые приборы и аксессуары</category>
+<category id="1872" parentId="1854">Эко-ланчбоксы</category>
+<category id="1873" parentId="1623">Косметички и органайзеры</category>
+<category id="1874" parentId="1631">Карточки и автомобильные диффузоры</category>
+<category id="1875" parentId="1648">Дождевики</category>
+<category id="1876" parentId="1620">Красота и уход</category>
+<category id="1877" parentId="1648">Зонты</category>
+<category id="1880" parentId="1631">Спреи для дома</category>
+<category id="1881" parentId="1854">Эко-товары для ванной</category>
+<category id="1894" parentId="1174">Ланч-боксы</category>
+<category id="1902" parentId="1177">Ароматы для дома</category>
+</categories>
+<offers>
+<offer id="38336" type="vendor.model" available="true">
+<url>https://finedesigngroup.ru/products/polka-knizhnaya-conceal-bolshaya-stal-38336/?r1=yandext&amp;r2=</url>
+<vendor>Umbra</vendor>
+<price>1150</price>
+<currencyId>RUB</currencyId>
+<categoryId>1194</categoryId>
+<picture>https://finedesigngroup.ru/upload/iblock/251/2511113c6ed8d26b75728c3cfb386b72.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/977/9772bd4851998280f5e9f349366d2e5b.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/ebc/ebc081738e396be6677bd29971fc0367.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/c55/c55b99bd98247b9af099f09a8cdb069c.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/d74/d7494951916d08484742b2e24976d1ef.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/f8e/f8eeef37fadca34aa43886617705e76d.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/ab1/ab193ca1c5cb71d18dd2451d4e68e822.jpeg</picture>
+<video>https://www.youtube.com/watch?v=r4szvOKFTjI</video>
+<delivery>true</delivery>
+<vendorCode>330633-560</vendorCode>
+<name>Полка книжная conceal большая сталь</name>
+<description>Удивительная книжная полка! Победитель конкурса FORM во Франкфурте и международных соревнований за лучший дизайн - Pratt design competition. Запатентованна в США и Канаде. При взгляде на книжки, просто висящие в воздухе, всем хочется задать один и тот же вопрос: "Что это такое, и в чем же секрет"? А секрет в конструкции этой полки - простой и совершенной, которая будет постоянно удивлять Ваших гостей.
+ 
+ Полка легко крепится к стене, все необходимое уже входит в комплект.</description>
+<param name="color">металлик</param>
+<param name="material">сталь</param>
+<param name="ШтрихКод">028295171953 </param>
+<param name="Высота">14</param>
+<param name="Длина">18</param>
+<param name="Глубина">18</param>
+<country_of_origin>Китай</country_of_origin>
+<param name="СтранаБренда">Канада</param>
+<param name="stock">3</param>
+<param name="Вес" unit="кг">0.48</param>
+</offer>
+<offer id="39048" type="vendor.model" available="true">
+<url>https://finedesigngroup.ru/products/sokovyzhimalka-catcher-seraya-39048/?r1=yandext&amp;r2=</url>
+<vendor>Joseph Joseph</vendor>
+<price>1250</price>
+<currencyId>RUB</currencyId>
+<categoryId>1189</categoryId>
+<picture>https://finedesigngroup.ru/upload/iblock/b98/b98fb9d1377b0cbb3d2fd3aca26ffe7d.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/b6f/b6f4204c79953b87a152ba0f2df0ca98.jpeg</picture>
+<delivery>true</delivery>
+<vendorCode>REAM0100AS</vendorCode>
+<name>Соковыжималка catcher™ серая</name>
+<description>Соковыжималка для цитрусовых с ситом для косточек. Благодаря резиновому дуршлагу под наконечником, косточки и жмых не попадают в сок. 
+Эргономичная круглая рукоятка обеспечивает комфорт и простоту в применении.</description>
+<param name="color">графит</param>
+<param name="material">полипропилен, термопластичная резина</param>
+<param name="ШтрихКод">5028420093476</param>
+<param name="Высота">8</param>
+<param name="Длина">16,5</param>
+<param name="Глубина">8</param>
+<country_of_origin>Китай</country_of_origin>
+<param name="СтранаБренда">Великобритания</param>
+<param name="stock">217</param>
+<param name="Вес" unit="кг">0.1</param>
+</offer>
+<offer id="38926" type="vendor.model" available="true">
+<url>https://finedesigngroup.ru/products/doska-razdelochnaya-chop2pot-plus-srednyaya-krasnaya-38926/?r1=yandext&amp;r2=</url>
+<vendor>Joseph Joseph</vendor>
+<price>1650</price>
+<currencyId>RUB</currencyId>
+<categoryId>1189</categoryId>
+<picture>https://finedesigngroup.ru/upload/iblock/1df/1df73efd77194ddc275fef7c965eefc8.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/39d/39d455184c53483ff8d08c6b0f9bc90d.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/8bb/8bb62f0f7d58892714fcf7ef3c09ef3c.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/20f/20fe02b10d3e2f1d5f9fe41f5f6ebb23.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/05b/05b8d273f5cde50290d938e7b54d4d27.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/560/5607bc33b1eed64353faacbb85afd9dc.jpeg</picture>
+<video>https://www.youtube.com/watch?v=Pvp1pxqf2V0</video>
+<delivery>true</delivery>
+<vendorCode>NSR016SW</vendorCode>
+<name>Доска разделочная chop2pot™ plus средняя красная</name>
+<description>Уникальная складная доска, которая принесла бренду Joseph Joseph мировую известность и ряд престижных наград. В плоском состоянии она предоставляет надёжную поверхность для разделывания любых продуктов. В результате лёгкого сжатия рукоятки края доски аккуратно складываются, образуя удобный совок, который позволит аккуратно переложить нарезанные ингредиенты в нужную ёмкость.
+Обновлённая версия этого прибора включает сразу несколько бонусов. Среди них — текстурная поверхность для резки, мягкая прорезиненная рукоятка и нескользящая основа.
+Можно мыть в посудомоечной машине.
+аккуратно складываются, образуя удобный совок, который позволит аккуратно переложить нарезанные ингредиенты в нужную ёмкость.
+Обновлённая версия этого прибора включает сразу несколько  бонусов. Среди них — текстурная поверхность для резки, мягкая прорезиненная рукоятка и нескользящие ножки.
+Можно мыть в посудомоечной машине.</description>
+<param name="color">красный</param>
+<param name="material">полипропилен, термопластичная резина</param>
+<param name="ШтрихКод">5028420094497</param>
+<param name="Высота">3</param>
+<param name="Длина">38</param>
+<param name="Глубина">20</param>
+<country_of_origin>Китай</country_of_origin>
+<param name="СтранаБренда">Великобритания</param>
+<param name="stock">87</param>
+<param name="Вес" unit="кг">0.3</param>
+</offer>
+<offer id="38925" type="vendor.model" available="true">
+<url>https://finedesigngroup.ru/products/doska-razdelochnaya-chop2pot-plus-srednyaya-zelenaya-38925/?r1=yandext&amp;r2=</url>
+<vendor>Joseph Joseph</vendor>
+<price>1650</price>
+<currencyId>RUB</currencyId>
+<categoryId>1189</categoryId>
+<picture>https://finedesigngroup.ru/upload/iblock/a43/a43f05a557123da15c19bfba909bb79e.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/9e0/9e0794d928eabfe0e49bd737a878e897.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/0da/0daae09e8a3a84974042f1c7a830b6c2.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/08b/08b7ae7eb23d83d2e1b62c8b3a198cf0.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/948/9481851416b4cf600d62987c98030d9b.jpeg</picture>
+<picture>https://finedesigngroup.ru/upload/iblock/88b/88b2dd874fdd4ad54b43e5c5b3c5b1db.jpeg</picture>
+<video>https://www.youtube.com/watch?v=Pvp1pxqf2V0</video>
+<delivery>true</delivery>
+<vendorCode>NSG016SW</vendorCode>
+<name>Доска разделочная chop2pot™ plus средняя зеленая</name>
+<description>Уникальная складная доска, которая принесла бренду Joseph Joseph мировую известность и ряд престижных наград. В плоском состоянии она предоставляет надёжную поверхность для разделывания любых продуктов. В результате лёгкого сжатия рукоятки края доски аккуратно складываются, образуя удобный совок, который позволит аккуратно переложить нарезанные ингредиенты в нужную ёмкость.
+Обновлённая версия этого прибора включает сразу несколько бонусов. Среди них — текстурная поверхность для резки, мягкая прорезиненная рукоятка и нескользящая основа.
+Можно мыть в посудомоечной машине.
+аккуратно складываются, образуя удобный совок, который позволит аккуратно переложить нарезанные ингредиенты в нужную ёмкость.
+Обновлённая версия этого прибора включает сразу несколько  бонусов. Среди них — текстурная поверхность для резки, мягкая прорезиненная рукоятка и нескользящие ножки.
+Можно мыть в посудомоечной машине.</description>
+<param name="color">зеленый</param>
+<param name="material">полипропилен, термопластичная резина</param>
+<param name="ШтрихКод">5028420094374</param>
+<param name="Высота">38,3</param>
+<param name="Длина">3,3</param>
+<param name="Глубина">21,8</param>
+<country_of_origin>Китай</country_of_origin>
+<param name="СтранаБренда">Великобритания</param>
+<param name="stock">926</param>
+<param name="Вес" unit="кг">0.3</param>
+</offer>
+</offers>
+</shop>
+</yml_catalog>
