@@ -2,14 +2,18 @@
 
 It's alpha version.
 
-# Info
+## Info
 
 This package can be used to parse any source file (YML, CSV, XML) and convert it to abstract Entity, which can be easily imported
 to any existing ecommerce solution.
 
 See **test** folder for examples.
 
-# Quick Start
+### Requirements
+
+PHP version >= 5.6
+
+## Quick Start
 
 Add this lines to composer.json
 
@@ -30,7 +34,7 @@ Add this lines to composer.json
 
 Run: `composer install`
 
-# TODO
+## TODO
 
 1. Implement CSV parser
 2. Implement XML parser
