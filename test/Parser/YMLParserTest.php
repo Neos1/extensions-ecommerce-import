@@ -53,6 +53,28 @@ class YMLParserTest extends TestCase
         $this->assertEquals('кг', $entity1_params['вес']->getUnit());
     }
 
+    public function testParseWithCustomTag()
+    {
+        $schema = Schema::createFromYaml(file_get_contents(__DIR__ . '/schemaWithCustomTag.yaml'));
+        $parser = $schema->getParser();
+        $entities = $parser->parse(__DIR__ . '/importWithCustomTag.yml', $schema);
+        $this->assertEmpty(
+            $parser->getErrors(),
+            'There should be no errors, but we got: ' . implode(', ', $parser->getErrors())
+        );
+        $this->assertEmpty(
+            $parser->getWarnings(),
+            'There should be no warnings, but we got some: ' . implode(', ', $parser->getWarnings())
+        );
+        $this->assertTrue(is_array($entities));
+        $this->assertCount(1, $entities);
+        $this->assertCount(1, array_filter($entities, function ($entity) {
+            return $entity->getName() === 'offer';
+        }), 'There should be 3 offers');
+        $entity1 = $entities[0];
+        $this->assertEquals('test', $entity1->video);
+    }
+
     public function testParseWindows1251()
     {
         $schema = Schema::createFromYaml(file_get_contents(__DIR__ . '/schema-1251.yaml'));
