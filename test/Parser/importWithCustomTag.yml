@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2020-04-24 12:10">
+<shop>
+    <categories>
+        <category id="1">Посуда для приготовления</category>
+        <category id="101" parentId="1">Наборы посуды</category>
+        <category id="113" parentId="1">Теппаньяки</category>
+    </categories>
+    <offers>
+        <offer id="1100890" available="true" inStock="11">
+            <name>Набор для спагетти 20пр Studio</name>
+            <price>16470</price>
+            <currencyId>RUR</currencyId>
+            <vendor>BergHOFF</vendor>
+            <vendorCode>1100890</vendorCode>
+            <barcode>5413821100890</barcode>
+            <description>
+            <![CDATA[
+            Полный набор для приготовления пасты любой длины и формы. Кастрюля из нержавеющей стали 18/10 быстро нагревается, экономя электроэнергию. Перфорированная вставка облегчает слив, становясь дуршлагом, - ее нужно просто вынуть из кастрюли. Разумеется, вы можете использовать кастрюлю и саму по себе для приготовления супов. Используя вставку, вы превращаете ее в пароварку. Кастрюля подходит для всех типов плит, включая индукционные. Щипцы позволяют комфортно сервировать пасту в тарелки из высококачественного фарфора. В набор включены 4 вилки и 2 блюда для сервировки пасты, соусов, салатов и других сопровождающих блюд. Миска с теркой позволяет натирать сыры прямо за столом. Белый фарфор идеально сочетается со всеми видами и стилями сервировки. Все предметы подходят для мытья в посудомоечной машине, тарелки можно использовать в духовом шкафу и микроволновой печи.<br\><br\>Состав набора:<br/>6x тарелка для пасты 27см</br>1x миска для салата 31см</br>1x миска для соуса 14см</br>1x терка 15см</br>6x вилка для пасты 21см</br>1x щипцы для пасты 27см</br>1x кастрюля для пасты с крышкой и вставкой-пароваркой 20см
+            ]]>
+            </description>
+            <manufacturer_warranty>true</manufacturer_warranty>
+            <categoryId>101</categoryId>
+            <categoriesList>
+            <categoryId>101</categoryId>
+            </categoriesList>
+            <pictureTHUMB>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/thumb.jpg
+            </pictureTHUMB>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_001.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_002.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_003.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_004.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_005.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_006.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_007.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_008.jpg
+            </picture>
+            <picture>
+            http://b2b.berghoff.ru/catalog_xml_export/productsPhoto/1100890/1100890_009.jpg
+            </picture>
+            <video>test</video>
+            <param name="Бренд">BergHOFF</param>
+            <param name="Серия">Studio</param>
+            <param name="Вес" unit="кг">11.14</param>
+            <param name="Цвет">Металл</param>
+            <param name="Материал">
+            18/10 нержавеющая сталь
+            <br/>
+            фарфор
+            </param>
+            <param name="Крышка">Стекло</param>
+            <param name="Внутренняя отделка">Зеркальная</param>
+            <param name="Внешняя отделка">Зеркальная</param>
+            <param name="Дно">3-слойное</param>
+            <param name="Источник тепла">
+            Подходит для любых типов плит, включая индукционные
+            </param>
+            <param name="Уход">Подходит для посудомоечной машины</param>
+            <param name="specIcons">xquecdbaigzO</param>
+        </offer>
+    </offers>
+</shop>
+</yml_catalog>

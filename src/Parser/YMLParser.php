@@ -84,7 +84,18 @@ class YMLParser extends AbstractParser
             case 'attribute':
                 return $offer->getAttribute($param->getName());
             default:
+            $xml = $offer->getXml();
+            $xpath = $xml->xpath($param->getName());
+            $result = array();
+            foreach ($xpath as $value) {
+                $result[] = (string) $value;
+            }
+            if (empty($result)) {
                 return null;
+            }
+            return count($result) == 1
+                ? $result[0]
+                : $result;
         }
     }
 
