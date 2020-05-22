@@ -57,6 +57,9 @@ class YMLParser extends AbstractParser
                 return $offer->getDescription();
             case 'price':
                 return $offer->getPrice();
+            case 'oldprice':
+                $value = $this->extractParamValueFromOfferUsingOptions($offer, $param);
+                return is_null($value) ? $value : floatval($value);
             case 'currency':
                 $currency = $offer->getCurrency();
                 return !is_null($currency) ? $currency->getId() : null;
@@ -84,18 +87,18 @@ class YMLParser extends AbstractParser
             case 'attribute':
                 return $offer->getAttribute($param->getName());
             default:
-            $xml = $offer->getXml();
-            $xpath = $xml->xpath($param->getName());
-            $result = array();
-            foreach ($xpath as $value) {
-                $result[] = (string) $value;
-            }
-            if (empty($result)) {
-                return null;
-            }
-            return count($result) == 1
-                ? $result[0]
-                : $result;
+                $xml = $offer->getXml();
+                $xpath = $xml->xpath($param->getName());
+                $result = array();
+                foreach ($xpath as $value) {
+                    $result[] = (string) $value;
+                }
+                if (empty($result)) {
+                    return null;
+                }
+                return count($result) == 1
+                    ? $result[0]
+                    : $result;
         }
     }
 

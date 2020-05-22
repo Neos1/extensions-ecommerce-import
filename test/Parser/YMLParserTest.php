@@ -33,6 +33,7 @@ class YMLParserTest extends TestCase
         $this->assertEquals('Набор для спагетти 20пр Studio', $entity1->name);
         $this->assertTrue($entity1->published);
         $this->assertEquals(16470, $entity1->price);
+        $this->assertEquals(17000, $entity1->oldprice);
         $this->assertEquals('RUR', $entity1->currency);
         $this->assertEquals('BergHOFF', $entity1->brand);
         $this->assertEquals('1100890', $entity1->ean);

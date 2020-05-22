@@ -10,6 +10,7 @@
         <offer id="1100890" available="true" inStock="11">
             <name>Набор для спагетти 20пр Studio</name>
             <price>16470</price>
+            <oldprice>17000</oldprice>
             <currencyId>RUR</currencyId>
             <vendor>BergHOFF</vendor>
             <vendorCode>1100890</vendorCode>

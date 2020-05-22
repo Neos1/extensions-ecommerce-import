@@ -15,6 +15,9 @@ entities:
     price:
       type: float
       required: true
+    oldprice:
+      type: float
+      default: 0.0
     currency:
       default: RUR
     vendor:
