@@ -2,7 +2,7 @@
     "name": "whitebox/ecommerce-import",
     "description": "This extension should be used as core for any ecommerce import",
     "type": "library",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "autoload": {
         "psr-4": {
             "Whitebox\\EcommerceImport\\": "./src"
@@ -14,7 +14,7 @@
         }
     },
     "require": {
-        "symfony/yaml": "^3.4",
+        "symfony/yaml": "^4.0",
         "php" : "^5.6 || ^7.0",
         "sirian/yandex-market-language-parser": "3.0"
     },
