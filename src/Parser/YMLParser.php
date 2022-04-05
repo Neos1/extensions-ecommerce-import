@@ -2,6 +2,7 @@
 
 namespace Whitebox\EcommerceImport\Parser;
 
+use Sirian\YMLParser\Category;
 use Sirian\YMLParser\Offer\Offer;
 use Sirian\YMLParser\Offer\VendorModelOffer;
 use Whitebox\EcommerceImport\Schema;
@@ -73,13 +74,15 @@ class YMLParser extends AbstractParser
             $entity = $this->offerToEntity($offer, $offer_schema);
             if (!is_null($entity)) {
                 $entities[] = $entity;
-                $params = [];
-                foreach ($entity->params as $parameter) {
-                    $temp = [];
-                    $temp[$parameter->getName()] = (is_numeric($parameter->getValue()) == false) ? 'checkboxes' : 'number';
-                    $params = array_merge($params, $temp);
+                if (!empty($entity->params)) {
+                    $params = [];
+                    foreach ($entity->params as $parameter) {
+                        $temp = [];
+                        $temp[$parameter->getName()] = (is_numeric($parameter->getValue()) == false) ? 'checkboxes' : 'number';
+                        $params = array_merge($params, $temp);
+                    }
+                    $par_entities = array_merge($par_entities, $params);
                 }
-                $par_entities = array_merge($par_entities, $params);
             }
         }
 
@@ -123,6 +126,9 @@ class YMLParser extends AbstractParser
                 return $offer->getPictures();
             case 'params':
                 return $offer->getParams();
+            case 'outlets':
+                $value = $this->extractParamValueFromOfferUsingOptions($offer, $param);
+                return $value;
             default:
                 return $this->extractParamValueFromOfferUsingOptions($offer, $param);
         }
@@ -138,6 +144,13 @@ class YMLParser extends AbstractParser
         switch ($param->getParserOptions()) {
             case 'attribute':
                 return $offer->getAttribute($param->getName());
+            case 'instock':
+                $data = $offer->getXml()->{$param->getName()};
+                $amount = 0.0;
+                foreach ($data->outlet as $item) {
+                    $amount += floatval($item->attributes()['instock']->__toString());
+                }
+                return $amount;
             default:
                 $xml = $offer->getXml();
                 $xpath = $xml->xpath($param->getName());
