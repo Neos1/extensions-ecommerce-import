@@ -177,6 +177,7 @@ class YMLParser extends AbstractParser
     {
         $entity = new Entity('category');
         $entity->id = $category->getId();
+        $entity->name = $category->getName();
         $entity->parent_id = ($category->getParent()) ? $category->getParent()->getId() : null;
         return $entity;
     }
