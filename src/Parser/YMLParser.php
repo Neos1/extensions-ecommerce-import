@@ -63,23 +63,33 @@ class YMLParser extends AbstractParser
         foreach ($shop->getCategories() as $category) {
             $cat_entity = $this->categoryToEntity($category);
             if (!is_null($cat_entity)) {
-                $cat_entities[] = $cat_entity;
+                $cat_entities = $cat_entity;
             }
         }
 
         $entities = [];
+        $par_entities = [];
         foreach ($result->getOffers() as $offer) {
             $entity = $this->offerToEntity($offer, $offer_schema);
             if (!is_null($entity)) {
                 $entities[] = $entity;
+                $params = [];
+                foreach ($entity->params as $parameter) {
+                    $temp = [];
+                    $temp[$parameter->getName()] = (is_numeric($parameter->getValue()) == false) ? 'checkboxes' : 'number';
+                    $params = array_merge($params, $temp);
+                }
+                $par_entities = array_merge($par_entities, $params);
             }
         }
 
         return [
             'categories' => $cat_entities,
+            'parameters' => $par_entities,
             'offers'     => $entities,
         ];
     }
+
 
     /**
      * @param Offer $offer
