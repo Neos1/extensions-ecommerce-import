@@ -64,7 +64,7 @@ class YMLParser extends AbstractParser
         foreach ($shop->getCategories() as $category) {
             $cat_entity = $this->categoryToEntity($category);
             if (!is_null($cat_entity)) {
-                $cat_entities = $cat_entity;
+                $cat_entities[] = $cat_entity;
             }
         }
 
@@ -198,6 +198,7 @@ class YMLParser extends AbstractParser
         }
         foreach ($schema->getParams() as $param) {
             $value = $this->extractParamValueFromOffer($offer, $param);
+            
             if ($param->isRequired() && is_null($value)) {
                 $this->addError(sprintf($message, 'Missing required param: ' . $param->getName()));
                 return null;
@@ -205,6 +206,9 @@ class YMLParser extends AbstractParser
             if (is_null($value)) {
                 $value = $param->getDefault();
             }
+
+            $entity->{$param->getAlias()} = $value;
+            
             if (!$param->isValidValue($value)) {
                 if ($param->isRequired()) {
                     $this->addError(sprintf($message, 'Required param: "' . $param->getName() . '" is invalid'));
