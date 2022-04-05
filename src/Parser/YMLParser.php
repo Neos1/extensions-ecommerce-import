@@ -40,6 +40,48 @@ class YMLParser extends AbstractParser
     }
 
     /**
+     * @param string $file
+     * @param Schema $schema
+     * 
+     * @return array
+     */
+    public function parseAll($file, Schema $schema)
+    {
+        $parser = new Parser();
+        $result = $parser->parse($file);
+
+        // NOTE: need to call it before accessing offers
+        $shop = $result->getShop();
+
+        $offer_schema = $schema->getEntity('offer');
+        if (is_null($offer_schema)) {
+            $this->addError('No offer entity');
+            return [];
+        }
+
+        $cat_entities = [];
+        foreach ($shop->getCategories() as $category) {
+            $cat_entity = $this->categoryToEntity($category);
+            if (!is_null($cat_entity)) {
+                $cat_entities[] = $cat_entity;
+            }
+        }
+
+        $entities = [];
+        foreach ($result->getOffers() as $offer) {
+            $entity = $this->offerToEntity($offer, $offer_schema);
+            if (!is_null($entity)) {
+                $entities[] = $entity;
+            }
+        }
+
+        return [
+            'categories' => $cat_entities,
+            'offers'     => $entities,
+        ];
+    }
+
+    /**
      * @param Offer $offer
      * @param Param $param
      * @return mixed|null
@@ -100,6 +142,20 @@ class YMLParser extends AbstractParser
                     ? $result[0]
                     : $result;
         }
+    }
+
+    /**
+     * @param Category $category
+     * @param Param $param
+     * 
+     * @return mixed|null
+     */
+    public function categoryToEntity(Category $category)
+    {
+        $entity = new Entity('category');
+        $entity->id = $category->getId();
+        $entity->parent_id = ($category->getParent()) ? $category->getParent()->getId() : null;
+        return $entity;
     }
 
     /**
