@@ -86,12 +86,27 @@ class YMLParser extends AbstractParser
                             }
                         } else {
                             $par_entities[$par_name] = [
-                                'type' => (is_numeric($par_value) == false) ? 'checkboxes' : 'number',
+                                'type' => 'checkboxes',
                                 'values' => [$par_value],
                             ];
                         }
                     }
                 }
+            }
+        }
+        
+        // Set attribute types
+        foreach ($par_entities as &$param) {
+            $is_numeric = true;
+            foreach ($param['values'] as $v) {
+                $is_numeric = is_numeric($v);
+                if (!$is_numeric) {
+                    break;
+                }
+            }
+
+            if ($is_numeric) {
+                $param['type'] = 'number';
             }
         }
 
