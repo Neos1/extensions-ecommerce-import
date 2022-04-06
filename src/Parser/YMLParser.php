@@ -74,14 +74,23 @@ class YMLParser extends AbstractParser
             $entity = $this->offerToEntity($offer, $offer_schema);
             if (!is_null($entity)) {
                 $entities[] = $entity;
+
                 if (!empty($entity->params)) {
-                    $params = [];
                     foreach ($entity->params as $parameter) {
-                        $temp = [];
-                        $temp[$parameter->getName()] = (is_numeric($parameter->getValue()) == false) ? 'checkboxes' : 'number';
-                        $params = array_merge($params, $temp);
+                        $par_name = $parameter->getName();
+                        $par_value = $parameter->getValue();
+
+                        if (array_key_exists($par_name, $par_entities)) {
+                            if (!in_array($par_value, $par_entities[$par_name]['values'])) {
+                                $par_entities[$par_name]['values'][] = $par_value;
+                            }
+                        } else {
+                            $par_entities[$par_name] = [
+                                'type' => (is_numeric($par_value) == false) ? 'checkboxes' : 'number',
+                                'values' => [$par_value],
+                            ];
+                        }
                     }
-                    $par_entities = array_merge($par_entities, $params);
                 }
             }
         }
