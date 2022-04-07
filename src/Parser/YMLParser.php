@@ -148,6 +148,8 @@ class YMLParser extends AbstractParser
                 return $offer instanceof VendorModelOffer ? $offer->getVendorCode() : null;
             case 'pictures':
                 return $offer->getPictures();
+            case 'picture':
+                return $offer->getPictures();
             case 'params':
                 return $offer->getParams();
             case 'outlets':
