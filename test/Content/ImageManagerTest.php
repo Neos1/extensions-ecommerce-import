@@ -18,7 +18,7 @@ class ImageManagerTest extends TestCase
      */
     protected static $manager;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         parent::setUpBeforeClass();
         static::$manager = new ImageManager(
@@ -28,7 +28,7 @@ class ImageManagerTest extends TestCase
         );
     }
 
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
         parent::tearDownAfterClass();
         foreach (glob(static::BASE_DIR . '/*') as $filename) {

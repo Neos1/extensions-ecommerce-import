@@ -2,7 +2,7 @@
     "name": "whitebox/ecommerce-import",
     "description": "This extension should be used as core for any ecommerce import",
     "type": "library",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "autoload": {
         "psr-4": {
             "Whitebox\\EcommerceImport\\": "./src"
